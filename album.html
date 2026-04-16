@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="styles/birthday.css">
+    <script src="scripts/birthday.js" defer></script>
+</head>
+
+<body>
+
+    <h1>Happy Birthday! 🎂</h1>
+
+    <div class="audio-controls">
+        <button id="musicBtn" onclick="toggleMusic()">Play Music 🎵</button>
+        <audio id="birthdaySong" loop>
+            <source src="Idea 15.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <div class="gallery">
+        <div class="photo-card" onclick="openLightbox(this)">
+            <img src="images/one.jpg" alt="Memory 1">
+            <div class="caption">The day we met</div>
+        </div>
+
+        <div class="photo-card" onclick="openLightbox(this)">
+            <img src="images/three.jpg" alt="Memory 2">
+            <div class="caption">Summer Adventures</div>
+        </div>
+
+        <div class="photo-card" onclick="openLightbox(this)">
+            <img src="images/two.jpg" alt="Memory 3">
+            <div class="caption">The best celebration</div>
+        </div>
+
+        <div class="photo-card" onclick="openLightbox(this)">
+            <img src="images/four.jpg" alt="Memory 4">
+            <div class="caption">Ice cream day</div>
+        </div>
+
+        <div class="photo-card" onclick="openLightbox(this)">
+            <img src="images/5.webp" alt="Memory 5">
+            <div class="caption">The signature pose</div>
+        </div>
+        
+        <div class="photo-card" onclick="openLightbox(this)">
+            <img src="images/sea.jpg" alt="Memory 6">
+            <div class="caption">Ocean view</div>
+        </div>
+        
+        <div class="photo-card" onclick="openLightbox(this)">
+            <img src="images/weird.jpg" alt="Memory 7">
+            <div class="caption">In my sweater</div>
+        </div>
+        
+        <div class="photo-card" onclick="openLightbox(this)">
+            <img src="images/tom.jpg" alt="Memory 8">
+            <div class="caption">The second outing</div>
+        </div>
+
+        <div class="photo-card" onclick="openLightbox(this)">
+            <img src="images/smile.jpg" alt="Memory 9">
+            <div class="caption">Meeeee</div>
+        </div>
+
+        <div class="photo-card" onclick="openLightbox(this)">
+            <img src="images/hehe.jpg" alt="Memory 10">
+            <div class="caption">Horsing around</div>
+        </div>
+
+        <div class="photo-card" onclick="openLightbox(this)">
+            <img src="images/princess.jpg" alt="Memory 11">
+            <div class="caption">Youuuuuu💖💖</div>
+        </div>
+
+        <div class="photo-card" onclick="openLightbox(this)">
+            <img src="images/night.jpg" alt="Memory 12">
+            <div class="caption">Late night walk</div>
+        </div>
+    </div>
+
+    <div id="lightbox" onclick="this.style.display='none'">
+        <img id="lightbox-img" src="" alt="Full view">
+        <div id="lightbox-caption"></div>
+    </div>
+
+    <div class="end">
+        <a href="index.html">Back to the message</a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+body {
+    background-color: #f4f1ea;
+    font-family: 'Georgia', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    margin: 0;
+}
+
+h1 {
+    color: #5a5a5a;
+    margin-bottom: 40px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.photo-card {
+    background: white;
+    padding: 15px 15px 40px 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: rotate(-2deg);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.photo-card:nth-child(even) {
+    transform: rotate(3deg);
+}
+
+.photo-card:hover {
+    transform: rotate(0deg) scale(1.05);
+    z-index: 10;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    filter: sepia(20%);
+}
+
+.caption {
+    text-align: center;
+    margin-top: 15px;
+    font-style: italic;
+    color: #333;
+}
+
+#lightbox {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border: 5px solid white;
+    transition: transform 0.3s ease;
+}
+
+#lightbox-caption {
+    position: absolute;
+    bottom: 50px;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.audio-controls {
+    margin-bottom: 20px;
+}
+
+#musicBtn {
+    background-color: #ff9a9e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+#musicBtn:hover {
+    background-color: #fecfef;
+    color: #be6265;
+}
+
+.end {
+    margin-top: 20px;
+}
+
+a {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: white;
+    color: #f38181;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+}
